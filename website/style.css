@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+hr {
+  margin: 3rem 0 2rem 0;
+  border: white 3px solid;
+}
+:root {
+  --main-header-color: rgb(255, 255, 255);
+  --main-header2-color: rgb(0, 0, 0);
+  --main-color: rgb(135, 133, 133);
+  --main-color2: rgb(255, 248, 212);
+
+  --main-border-size: 10px;
+  --main-border-color: rgb(0, 0, 0);
+}
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+a:hover {
+  color: var(--main-header2-color);
+  font-weight: 700;
+}
+
+html {
+  font-size: 1.1rem;
+  color: var(--main-color);
+}
+body {
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Special Elite", cursive;
+  display: grid;
+  grid-template-columns: minmax(10px, 1064px);
+  justify-content: center;
+  /* padding: 2rem; */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 239, 203);
+  /* background-image: url("billeder/baggrund.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: saturate(50%) opacity(50%);
+  z-index: -10;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+}
+h2 {
+  font-size: 1rem;
+
+  font-family: "Bebas Neue", cursive;
+  color: var(--main-header2-color);
+}
+
+main {
+  width: 100%;
+}
+.fb-page {
+  /* border: 1px solid black; */
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  /* grid-template-rows: 1fr 1fr; */
+  gap: 30px;
+  margin: 0 20px;
+}
+
+.overskrift {
+  display: grid;
+  font-size: 2rem;
+  /* pointer-events: none; */
+}
+
+.overskrift .tekst {
+  /* pointer-events: none; */
+  padding: 1rem;
+  width: 100%;
+  color: var(--main-header-color);
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  place-self: end center;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.464);
+}
+.overskrift h2 {
+  color: var(--main-header-color);
+}
+
+/* .overskrift img {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  border: solid var(--main-border-size) var(--main-border-color);
+  z-index: -2;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+} */
+
+.overskrift video {
+  z-index: 100;
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  border: solid var(--main-border-size) var(--main-border-color);
+  z-index: -2;
+  /* object-fit: cover; */
+  /* aspect-ratio: 16/9; */
+  height: auto;
+}
+
+.logo,
+.ukulele img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: solid var(--main-border-size) var(--main-header2-color);
+}
+.presse img {
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 10%;
+  border: solid var(--main-border-size) var(--main-header2-color);
+}
+
+.social li {
+  display: inline;
+}
+.social li:last-child {
+  margin-left: auto;
+}
+.social ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fa {
+  /* padding: 5px; */
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  /* margin: 5px 2px; */
+  color: var(--main-color);
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.medlemmer {
+  /* grid-row: 3;
+  place-self: end center; */
+  list-style-type: none;
+  font-family: "Bebas Neue", cursive;
+}
+
+.medlemmer span {
+  font-size: 1rem;
+
+  color: var(--main-header2-color);
+}
+
+.beskrivelse {
+  /* grid-row: 2; */
+  /* grid-column: 1 / span 2; */
+}
+
+#title {
+  font-size: 2rem !important;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  border: solid var(--main-border-size) var(--main-border-color);
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.qr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.qr img {
+  width: 100%;
+}
+
+footer {
+  /* display: grid; */
+  margin: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+}
+
+footer > * {
+  padding: 10px;
+}
+.col embed {
+  border: solid 1px var(--main-border-color);
+  /* transform: rotate(5deg); */
+}
+
+@media (min-width: 600px) {
+  section {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media (min-width: 670px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .presse {
+    place-self: start center;
+    text-align: center;
+  }
+  .ukulele {
+    place-self: start right;
+    text-align: right;
+  }
+  .kontakt {
+    place-self: start left;
+    text-align: left;
+  }
+}
+
+@media (min-width: 870px) {
+  .medlemmer {
+    grid-row: 3;
+    place-self: end center;
+  }
+  .overskrift {
+    grid-column: 1 / span 2;
+  }
+  .jobs {
+    grid-column: 2 / span 1;
+  }
+}
